@@ -1,9 +1,8 @@
-// ignore_for_file: library_private_types_in_public_api, file_names
-
 import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'bmi_result_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -246,6 +245,7 @@ class _BMIcalculatorState extends State<BMIcalculator> {
                                   });
                                 },
                                 mini: true,
+                                heroTag: 'weight--',
                                 backgroundColor: widget.buttonColor,
                                 child: const Icon(Icons.remove),
                               ),
@@ -256,6 +256,7 @@ class _BMIcalculatorState extends State<BMIcalculator> {
                                   });
                                 },
                                 mini: true,
+                                heroTag: 'weight++',
                                 backgroundColor: widget.buttonColor,
                                 child: const Icon(Icons.add),
                               )
@@ -295,6 +296,7 @@ class _BMIcalculatorState extends State<BMIcalculator> {
                                   });
                                 },
                                 mini: true,
+                                heroTag: 'age--',
                                 backgroundColor: widget.buttonColor,
                                 child: const Icon(Icons.remove),
                               ),
@@ -305,6 +307,7 @@ class _BMIcalculatorState extends State<BMIcalculator> {
                                   });
                                 },
                                 mini: true,
+                                heroTag: 'age++',
                                 backgroundColor: widget.buttonColor,
                                 child: const Icon(Icons.add),
                               )
