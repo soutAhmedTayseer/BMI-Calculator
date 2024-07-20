@@ -3,18 +3,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'bmi_result_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class BMIScreen extends StatefulWidget {
+  const BMIScreen({super.key});
 
   @override
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<BMIScreen> {
   bool isMale = true;
   Color appBarColor = Colors.blue;
   Color buttonColor = Colors.blue;
@@ -30,7 +27,7 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: appBarColor,
         ),
       ),
-      home: BMIcalculator(
+      home: BMICalculator(
         isMale: isMale,
         onGenderChanged: (bool male) {
           setState(() {
@@ -46,13 +43,13 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class BMIcalculator extends StatefulWidget {
+class BMICalculator extends StatefulWidget {
   final bool isMale;
   final void Function(bool) onGenderChanged;
   final Color buttonColor;
   final Color appBarColor;
 
-  const BMIcalculator({
+  const BMICalculator({
     super.key,
     required this.isMale,
     required this.onGenderChanged,
@@ -61,10 +58,10 @@ class BMIcalculator extends StatefulWidget {
   });
 
   @override
-  State<BMIcalculator> createState() => _BMIcalculatorState();
+  State<BMICalculator> createState() => _BMICalculatorState();
 }
 
-class _BMIcalculatorState extends State<BMIcalculator> {
+class _BMICalculatorState extends State<BMICalculator> {
   double height = 180;
   int age = 18;
   int weight = 60;
